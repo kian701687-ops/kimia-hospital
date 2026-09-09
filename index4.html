@@ -1613,21 +1613,34 @@ class="appointments-list"
 
 </div>
 
-
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
+
+
+const SUPABASE_URL =
+"https://ffcadzicfmxznqudtccs.supabase.co";
+
+const SUPABASE_PUBLISHABLE_KEY =
+"کلید Publishable جدید خودت";
+
+const supabaseClient =
+window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_PUBLISHABLE_KEY
+);
+
 
 /* =====================================================
    تنظیمات
 ===================================================== */
+
 
 const ADMIN_PASSWORD = "0813";
 
 const STORAGE_KEY = "imam_reza_hospital_appointments";
 
 
-/* =====================================================
-   پزشکان
-===================================================== */
+
 
 const doctors = [
 
@@ -2010,17 +2023,25 @@ document.getElementById("appointmentFormArea").style.display="block";
 /* =====================================================
    ذخیره نوبت
 ===================================================== */
-
-function getAppointments(){
+async function getAppointments(){
 
 try{
 
-return JSON.parse(
-localStorage.getItem(STORAGE_KEY)
-) || [];
+const { data, error } = await db
+.from("appointments")
+.select("*")
+.order("created_at", { ascending: false });
+
+if(error){
+console.error(error);
+return [];
+}
+
+return data || [];
 
 }catch(e){
 
+console.error(e);
 return [];
 
 }
@@ -2028,35 +2049,29 @@ return [];
 }
 
 
-function saveAppointments(list){
+async function saveAppointments(list){
 
-localStorage.setItem(
-STORAGE_KEY,
-JSON.stringify(list)
-);
+console.log("Supabase mode: saveAppointments is not used directly.");
 
 }
-
 
 /* =====================================================
    تأیید نهایی
 ===================================================== */
 
-function confirmAppointment(){
+async function confirmAppointment(){
 
 const button =
 document.getElementById("confirmAppointmentButton");
 
 button.disabled=true;
 
-button.textContent =
-"⏳ در حال ثبت...";
+button.textContent="⏳ در حال ثبت...";
 
 
 const appointment = {
 
-id:
-Date.now().toString(),
+id: Date.now().toString(),
 
 name:
 document.getElementById("patientName").value.trim(),
@@ -2076,28 +2091,36 @@ document.getElementById("appointmentTime").value,
 note:
 document.getElementById("appointmentNote").value.trim(),
 
-status:
-"pending",
+status:"pending",
 
-createdAt:
-new Date().toLocaleString("fa-IR")
+created_at:
+new Date().toISOString()
 
 };
 
 
-const appointments =
-getAppointments();
+try{
 
-appointments.unshift(appointment);
+const { data, error } = await db
+.from("appointments")
+.insert([appointment])
+.select()
+.single();
 
-saveAppointments(appointments);
 
+if(error){
 
-/*
-   اینجا نوبت ذخیره شده است.
-   برای ارسال واقعی به ایتا باید API ایتا
-   در سمت سرور قرار بگیرد.
-*/
+console.error(error);
+
+alert("ثبت نوبت انجام نشد. لطفاً دوباره تلاش کنید.");
+
+button.disabled=false;
+button.textContent="تأیید و ثبت نوبت";
+
+return;
+
+}
+
 
 document.getElementById("appointmentSummaryArea").style.display="none";
 
@@ -2105,10 +2128,21 @@ document.getElementById("appointmentSuccessArea").style.display="block";
 
 document.getElementById("successMessage").textContent =
 "نوبت شما با موفقیت ثبت شد. شماره درخواست: " +
-appointment.id;
+data.id;
+
+
+}catch(e){
+
+console.error(e);
+
+alert("خطا در اتصال به سرور.");
+
+button.disabled=false;
+button.textContent="تأیید و ثبت نوبت";
 
 }
 
+}
 
 /* =====================================================
    خدمات
@@ -2458,6 +2492,33 @@ renderAppointments();
 
 
 /* =====================================================
+   تغییر وضعیت
+===================================================== */
+
+function changeAppointmentStatus(id,status){
+
+const list =
+getAppointments();
+
+const item =
+list.find(x=>x.id===id);
+
+if(!item){
+
+return;
+
+}
+
+item.status=status;
+
+saveAppointments(list);
+
+renderAppointments();
+
+}
+
+
+/* =====================================================
    حذف نوبت
 ===================================================== */
 
@@ -2478,16 +2539,13 @@ saveAppointments(list);
 renderAppointments();
 
 }
-
-
 /* =====================================================
    حذف همه
 ===================================================== */
 
-function clearAllAppointments(){
+async function clearAllAppointments(){
 
-const list =
-getAppointments();
+const list = await getAppointments();
 
 if(list.length===0){
 
@@ -2497,19 +2555,30 @@ return;
 
 }
 
-if(!confirm("آیا می‌خواهید تمام نوبت‌ها حذف شوند؟")){
+if(!confirm("آیا می‌خواهید تمام نوبت‌ها حذف شوند?")){
 
 return;
 
 }
 
-localStorage.removeItem(STORAGE_KEY);
+const { error } = await db
+.from("appointments")
+.delete()
+.gte("id", "");
 
-renderAppointments();
+if(error){
+
+console.error(error);
+
+alert("حذف نوبت‌ها انجام نشد.");
+
+return;
 
 }
 
+await renderAppointments();
 
+}
 /* =====================================================
    خروجی نوبت‌ها
 ===================================================== */
@@ -2730,12 +2799,8 @@ renderServices();
 fillDoctorSelect();
 
 </script>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script>
-const SUPABASE_URL = "https://ffcadzicfmxznqudtccs.supabase.co";
-const SUPABASE_KEY = "کلید Publishable خودت";
-const db = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-</script>
+
 </body>
 </html>
 ```
+
