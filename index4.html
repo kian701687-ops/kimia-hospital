@@ -1,0 +1,2736 @@
+```html
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>بیمارستان امام رضا (ع) تأمین اجتماعی قم</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Tahoma,Arial,sans-serif;
+}
+
+body{
+    background:#071018;
+    color:#fff;
+    line-height:1.9;
+}
+
+button,input,select,textarea{
+    font-family:inherit;
+}
+
+button{
+    cursor:pointer;
+}
+
+.container{
+    width:min(1200px,92%);
+    margin:auto;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(7,16,24,.94);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.header-inner{
+    min-height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo-box{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.logo{
+    width:52px;
+    height:52px;
+    border-radius:16px;
+    background:linear-gradient(135deg,#ef233c,#9d0208);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
+    font-weight:bold;
+    box-shadow:0 10px 30px rgba(239,35,60,.25);
+}
+
+.logo-text h1{
+    font-size:18px;
+}
+
+.logo-text p{
+    color:#aebbc5;
+    font-size:12px;
+}
+
+.nav{
+    display:flex;
+    gap:7px;
+    flex-wrap:wrap;
+}
+
+.nav button{
+    border:0;
+    background:transparent;
+    color:#dce5eb;
+    padding:9px 12px;
+    border-radius:12px;
+    transition:.25s;
+}
+
+.nav button:hover{
+    background:#17232d;
+    color:#fff;
+}
+
+/* HERO */
+
+.hero{
+    padding:80px 0 60px;
+    background:
+    radial-gradient(circle at 20% 20%,rgba(239,35,60,.18),transparent 30%),
+    radial-gradient(circle at 80% 20%,rgba(0,180,216,.12),transparent 30%);
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.4fr .8fr;
+    gap:35px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-block;
+    padding:7px 13px;
+    border-radius:30px;
+    background:rgba(239,35,60,.12);
+    border:1px solid rgba(239,35,60,.25);
+    color:#ff7b8b;
+    margin-bottom:18px;
+    font-size:13px;
+}
+
+.hero h2{
+    font-size:42px;
+    line-height:1.35;
+    margin-bottom:20px;
+}
+
+.hero h2 span{
+    color:#ff4055;
+}
+
+.hero p{
+    color:#b8c5ce;
+    max-width:700px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:28px;
+}
+
+.btn{
+    border:0;
+    padding:13px 20px;
+    border-radius:14px;
+    font-weight:bold;
+    transition:.25s;
+}
+
+.btn-primary{
+    background:#e9233b;
+    color:#fff;
+    box-shadow:0 10px 25px rgba(233,35,59,.25);
+}
+
+.btn-primary:hover{
+    transform:translateY(-2px);
+    background:#ff3049;
+}
+
+.btn-secondary{
+    background:#17232d;
+    color:#fff;
+    border:1px solid #2b3944;
+}
+
+.btn-secondary:hover{
+    background:#22313c;
+}
+
+.btn-danger{
+    background:#7f1020;
+    color:#fff;
+}
+
+.btn-success{
+    background:#12623f;
+    color:#fff;
+}
+
+.btn-small{
+    padding:8px 12px;
+    font-size:12px;
+}
+
+.hero-card{
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:28px;
+    padding:30px;
+    box-shadow:0 25px 60px rgba(0,0,0,.25);
+}
+
+.cross{
+    width:130px;
+    height:130px;
+    margin:0 auto 20px;
+    position:relative;
+}
+
+.cross:before,
+.cross:after{
+    content:"";
+    position:absolute;
+    background:#e9233b;
+    border-radius:15px;
+}
+
+.cross:before{
+    width:42px;
+    height:130px;
+    left:44px;
+}
+
+.cross:after{
+    width:130px;
+    height:42px;
+    top:44px;
+}
+
+.hero-card h3{
+    text-align:center;
+    margin-bottom:8px;
+}
+
+.hero-card p{
+    text-align:center;
+    color:#aebbc5;
+}
+
+/* QUICK */
+
+.quick{
+    margin-top:20px;
+}
+
+.quick-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+}
+
+.info-card{
+    background:#101c25;
+    border:1px solid #20303b;
+    padding:20px;
+    border-radius:20px;
+}
+
+.info-card strong{
+    display:block;
+    margin-bottom:5px;
+}
+
+.info-card span{
+    color:#aebbc5;
+    font-size:14px;
+}
+
+/* SECTION */
+
+section{
+    padding:70px 0;
+}
+
+.section-title{
+    margin-bottom:30px;
+}
+
+.section-title small{
+    color:#ff4b60;
+}
+
+.section-title h2{
+    font-size:30px;
+    margin-top:5px;
+}
+
+.section-title p{
+    color:#9eabb5;
+    margin-top:8px;
+}
+
+/* ABOUT */
+
+.about-box{
+    background:#101c25;
+    border:1px solid #21313c;
+    padding:30px;
+    border-radius:25px;
+    color:#bdc9d1;
+}
+
+/* DOCTORS */
+
+.doctor-search{
+    width:100%;
+    margin-bottom:25px;
+    padding:15px 18px;
+    border-radius:15px;
+    border:1px solid #263943;
+    background:#0d1820;
+    color:#fff;
+    outline:none;
+}
+
+.doctor-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.doctor-card{
+    background:#101c25;
+    border:1px solid #21313c;
+    border-radius:22px;
+    padding:24px;
+    transition:.25s;
+}
+
+.doctor-card:hover{
+    transform:translateY(-5px);
+    border-color:#e9233b;
+}
+
+.doctor-avatar{
+    width:70px;
+    height:70px;
+    border-radius:20px;
+    background:#172731;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.doctor-card h3{
+    font-size:18px;
+}
+
+.doctor-card p{
+    color:#aebbc5;
+    font-size:13px;
+}
+
+.doctor-card .btn{
+    margin-top:15px;
+    width:100%;
+}
+
+/* SERVICES */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.service-card{
+    background:#101c25;
+    border:1px solid #21313c;
+    padding:22px 16px;
+    border-radius:20px;
+    text-align:center;
+    transition:.25s;
+}
+
+.service-card:hover{
+    transform:translateY(-4px);
+    border-color:#e9233b;
+    background:#13212b;
+}
+
+.service-icon{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.service-card h3{
+    font-size:15px;
+}
+
+/* EMERGENCY */
+
+.emergency{
+    background:linear-gradient(135deg,#470811,#18070a);
+    border:1px solid #7c1826;
+    border-radius:28px;
+    padding:35px;
+}
+
+.emergency h2{
+    color:#ff6575;
+}
+
+.emergency p{
+    color:#d3b9bd;
+    margin:8px 0 20px;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid #1e2c35;
+    padding:35px 0;
+    color:#94a3ad;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:30px;
+}
+
+footer h3{
+    color:#fff;
+    margin-bottom:10px;
+}
+
+/* MODAL */
+
+.modal{
+    position:fixed;
+    inset:0;
+    z-index:2000;
+    background:rgba(0,0,0,.72);
+    backdrop-filter:blur(8px);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.modal.show{
+    display:flex;
+    animation:fadeIn .2s ease;
+}
+
+.modal-box{
+    width:min(700px,100%);
+    max-height:90vh;
+    overflow:auto;
+    background:#101c25;
+    border:1px solid #2a3c47;
+    border-radius:25px;
+    padding:28px;
+    box-shadow:0 30px 100px rgba(0,0,0,.5);
+    animation:modalIn .25s ease;
+}
+
+.modal-large{
+    width:min(1100px,100%);
+}
+
+@keyframes fadeIn{
+    from{opacity:0}
+    to{opacity:1}
+}
+
+@keyframes modalIn{
+    from{
+        opacity:0;
+        transform:translateY(25px) scale(.97);
+    }
+    to{
+        opacity:1;
+        transform:none;
+    }
+}
+
+.modal-head{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.close{
+    width:38px;
+    height:38px;
+    border-radius:12px;
+    border:1px solid #344650;
+    background:#17242d;
+    color:#fff;
+    font-size:20px;
+}
+
+.modal p{
+    color:#b7c4cc;
+}
+
+.form-group{
+    margin-bottom:16px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:7px;
+    font-size:14px;
+}
+
+.required{
+    color:#ff4055;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    padding:13px 14px;
+    border-radius:13px;
+    border:1px solid #2b3d47;
+    background:#0b151d;
+    color:#fff;
+    outline:none;
+}
+
+.form-group textarea{
+    min-height:100px;
+    resize:vertical;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.summary{
+    background:#0b151d;
+    border:1px solid #273944;
+    padding:18px;
+    border-radius:18px;
+}
+
+.summary-row{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    border-bottom:1px solid #1e2d36;
+    padding:9px 0;
+}
+
+.summary-row:last-child{
+    border-bottom:0;
+}
+
+.summary-row span:first-child{
+    color:#8798a4;
+}
+
+.summary-row span:last-child{
+    color:#fff;
+    text-align:left;
+}
+
+.success{
+    text-align:center;
+    padding:30px 10px;
+}
+
+.success-icon{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    margin:0 auto 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#123c2d;
+    border:1px solid #267a59;
+    color:#55e0a6;
+    font-size:40px;
+}
+
+/* ADMIN */
+
+.admin-login{
+    max-width:450px;
+    margin:auto;
+}
+
+.admin-panel{
+    display:none;
+}
+
+.admin-stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.stat{
+    background:#0b151d;
+    border:1px solid #253743;
+    border-radius:18px;
+    padding:20px;
+}
+
+.stat-number{
+    font-size:30px;
+    font-weight:bold;
+    color:#ff4055;
+}
+
+.stat-title{
+    color:#9daab3;
+    font-size:13px;
+}
+
+.admin-tools{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+}
+
+.admin-search{
+    flex:1;
+    min-width:220px;
+    padding:13px;
+    border-radius:13px;
+    border:1px solid #2b3d47;
+    background:#0b151d;
+    color:#fff;
+    outline:none;
+}
+
+.appointments-list{
+    display:grid;
+    gap:15px;
+}
+
+.appointment-card{
+    background:#0b151d;
+    border:1px solid #273944;
+    border-radius:18px;
+    padding:20px;
+}
+
+.appointment-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+.appointment-card h3{
+    font-size:17px;
+}
+
+.appointment-info{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:8px;
+    color:#b8c5ce;
+    font-size:13px;
+}
+
+.appointment-actions{
+    display:flex;
+    gap:8px;
+    margin-top:15px;
+    flex-wrap:wrap;
+}
+
+.status{
+    display:inline-block;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:11px;
+}
+
+.status-pending{
+    background:#4c3a0b;
+    color:#ffd65a;
+}
+
+.status-approved{
+    background:#103e2b;
+    color:#5ce5a7;
+}
+
+.status-cancelled{
+    background:#4a1018;
+    color:#ff7c8a;
+}
+
+.empty{
+    text-align:center;
+    padding:40px;
+    color:#82919b;
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+    .services-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .doctor-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+    }
+
+    .admin-stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:700px){
+
+    .nav{
+        display:none;
+    }
+
+    .hero{
+        padding-top:50px;
+    }
+
+    .hero h2{
+        font-size:30px;
+    }
+
+    .quick-grid{
+        grid-template-columns:1fr;
+    }
+
+    .doctor-grid{
+        grid-template-columns:1fr;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .appointment-info{
+        grid-template-columns:1fr;
+    }
+
+    .admin-stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    section{
+        padding:50px 0;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="container header-inner">
+
+<div class="logo-box">
+
+<div class="logo">✚</div>
+
+<div class="logo-text">
+<h1>بیمارستان امام رضا (ع)</h1>
+<p>تأمین اجتماعی قم</p>
+</div>
+
+</div>
+
+<nav class="nav">
+
+<button onclick="scrollToSection('about')">
+درباره
+</button>
+
+<button onclick="scrollToSection('doctors')">
+پزشکان
+</button>
+
+<button onclick="scrollToSection('services')">
+خدمات
+</button>
+
+<button onclick="openAppointment()">
+نوبت‌دهی
+</button>
+
+<button onclick="openAdmin()">
+🔐 مدیریت
+</button>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<main>
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div>
+
+<span class="badge">
+🏥 مرکز درمانی تأمین اجتماعی
+</span>
+
+<h2>
+سلامتی شما،
+<br>
+<span>اولویت ماست</span>
+</h2>
+
+<p>
+بیمارستان امام رضا (ع) تأمین اجتماعی قم با هدف ارائه خدمات درمانی و مراقبتی به بیماران فعالیت می‌کند.
+</p>
+
+<div class="hero-buttons">
+
+<button
+class="btn btn-primary"
+onclick="openAppointment()"
+>
+📅 دریافت نوبت
+</button>
+
+<button
+class="btn btn-secondary"
+onclick="scrollToSection('services')"
+>
+🔎 مشاهده خدمات
+</button>
+
+</div>
+
+</div>
+
+
+<div class="hero-card">
+
+<div class="cross"></div>
+
+<h3>
+بیمارستان امام رضا (ع)
+</h3>
+
+<p>
+تأمین اجتماعی قم
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="quick">
+
+<div class="container quick-grid">
+
+<div class="info-card">
+<strong>📍 آدرس</strong>
+<span>
+قم، بلوار الغدیر، کوچه شماره ۴۹
+</span>
+</div>
+
+<div class="info-card">
+<strong>☎️ تلفن</strong>
+<span>
+۰۲۵-۳۸۷۰۰۸۴۰
+</span>
+</div>
+
+<div class="info-card">
+<strong>🚑 اورژانس</strong>
+<span>
+در شرایط اورژانسی با ۱۱۵ تماس بگیرید.
+</span>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+<small>معرفی</small>
+<h2>درباره بیمارستان</h2>
+<p>آشنایی با بیمارستان امام رضا (ع) تأمین اجتماعی قم</p>
+</div>
+
+<div class="about-box">
+
+<p>
+بیمارستان امام رضا (ع) تأمین اجتماعی قم یکی از مراکز درمانی وابسته به سازمان تأمین اجتماعی در شهر قم است.
+</p>
+
+<br>
+
+<p>
+📍 قم، بلوار الغدیر، کوچه شماره ۴۹
+</p>
+
+<br>
+
+<p>
+☎️ ۰۲۵-۳۸۷۰۰۸۴۰
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="doctors">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>پزشکان</small>
+
+<h2>پزشکان</h2>
+
+<p>
+برای مشاهده اطلاعات هر پزشک روی کارت او کلیک کنید.
+</p>
+
+</div>
+
+<input
+type="text"
+id="doctorSearch"
+class="doctor-search"
+placeholder="🔎 جستجوی نام یا تخصص پزشک..."
+oninput="searchDoctors()"
+/>
+
+<div id="doctorGrid" class="doctor-grid"></div>
+
+</div>
+
+</section>
+
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>خدمات</small>
+
+<h2>بخش‌ها و خدمات</h2>
+
+<p>
+برای مشاهده توضیحات هر بخش روی آن کلیک کنید.
+</p>
+
+</div>
+
+<div id="servicesGrid" class="services-grid"></div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="container">
+
+<div class="emergency">
+
+<h2>🚑 اورژانس</h2>
+
+<p>
+در شرایط اورژانسی و خطر فوری، زمان را از دست ندهید و با اورژانس ۱۱۵ تماس بگیرید.
+</p>
+
+<button
+class="btn btn-primary"
+onclick="openEmergency()"
+>
+اطلاعات اورژانس
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<div class="container footer-grid">
+
+<div>
+<h3>
+بیمارستان امام رضا (ع)
+</h3>
+<p>
+تأمین اجتماعی قم
+</p>
+</div>
+
+<div>
+<h3>آدرس</h3>
+<p>
+قم، بلوار الغدیر، کوچه شماره ۴۹
+</p>
+</div>
+
+<div>
+<h3>تماس</h3>
+<p>
+۰۲۵-۳۸۷۰۰۸۴۰
+</p>
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- ABOUT -->
+
+<div class="modal" id="aboutModal">
+
+<div class="modal-box">
+
+<div class="modal-head">
+
+<h2>درباره بیمارستان</h2>
+
+<button class="close" onclick="closeModal('aboutModal')">
+×
+</button>
+
+</div>
+
+<p>
+بیمارستان امام رضا (ع) تأمین اجتماعی قم یکی از مراکز درمانی سازمان تأمین اجتماعی در شهر قم است.
+</p>
+
+<br>
+
+<p>
+📍 قم، بلوار الغدیر، کوچه شماره ۴۹
+</p>
+
+<br>
+
+<p>
+☎️ ۰۲۵-۳۸۷۰۰۸۴۰
+</p>
+
+</div>
+
+</div>
+
+
+<!-- SERVICE -->
+
+<div class="modal" id="serviceModal">
+
+<div class="modal-box">
+
+<div class="modal-head">
+
+<h2 id="serviceTitle"></h2>
+
+<button class="close" onclick="closeModal('serviceModal')">
+×
+</button>
+
+</div>
+
+<div id="serviceContent"></div>
+
+</div>
+
+</div>
+
+
+<!-- DOCTOR -->
+
+<div class="modal" id="doctorModal">
+
+<div class="modal-box">
+
+<div class="modal-head">
+
+<h2 id="doctorName"></h2>
+
+<button class="close" onclick="closeModal('doctorModal')">
+×
+</button>
+
+</div>
+
+<div id="doctorContent"></div>
+
+<br>
+
+<button
+class="btn btn-primary"
+style="width:100%"
+onclick="appointmentFromDoctor()"
+>
+📅 درخواست نوبت از این پزشک
+</button>
+
+</div>
+
+</div>
+
+
+<!-- APPOINTMENT -->
+
+<div class="modal" id="appointmentModal">
+
+<div class="modal-box">
+
+<div class="modal-head">
+
+<h2>📅 درخواست نوبت</h2>
+
+<button class="close" onclick="closeModal('appointmentModal')">
+×
+</button>
+
+</div>
+
+
+<div id="appointmentFormArea">
+
+<form id="appointmentForm" onsubmit="showAppointmentSummary(event)">
+
+<div class="form-group">
+
+<label>
+نام و نام خانوادگی
+<span class="required">*</span>
+</label>
+
+<input
+type="text"
+id="patientName"
+required
+placeholder="نام و نام خانوادگی"
+/>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+شماره تماس
+<span class="required">*</span>
+</label>
+
+<input
+type="tel"
+id="patientPhone"
+required
+placeholder="مثلاً 09123456789"
+/>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+انتخاب پزشک
+<span class="required">*</span>
+</label>
+
+<select id="doctorSelect" required>
+
+<option value="">
+انتخاب پزشک
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-grid">
+
+<div class="form-group">
+
+<label>
+تاریخ پیشنهادی
+<span class="required">*</span>
+</label>
+
+<input
+type="date"
+id="appointmentDate"
+required
+/>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+ساعت پیشنهادی
+<span class="required">*</span>
+</label>
+
+<input
+type="time"
+id="appointmentTime"
+required
+/>
+
+</div>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+توضیحات / علت مراجعه
+</label>
+
+<textarea
+id="appointmentNote"
+placeholder="در صورت نیاز توضیحات خود را بنویسید..."
+></textarea>
+
+</div>
+
+
+<button
+class="btn btn-primary"
+style="width:100%"
+type="submit"
+>
+ادامه و مشاهده خلاصه درخواست
+</button>
+
+</form>
+
+</div>
+
+
+<div id="appointmentSummaryArea" style="display:none">
+
+<h3 style="margin-bottom:15px">
+🔎 خلاصه درخواست نوبت
+</h3>
+
+<div class="summary">
+
+<div class="summary-row">
+<span>نام بیمار</span>
+<span id="sumName"></span>
+</div>
+
+<div class="summary-row">
+<span>شماره تماس</span>
+<span id="sumPhone"></span>
+</div>
+
+<div class="summary-row">
+<span>پزشک</span>
+<span id="sumDoctor"></span>
+</div>
+
+<div class="summary-row">
+<span>تاریخ</span>
+<span id="sumDate"></span>
+</div>
+
+<div class="summary-row">
+<span>ساعت</span>
+<span id="sumTime"></span>
+</div>
+
+<div class="summary-row">
+<span>توضیحات</span>
+<span id="sumNote"></span>
+</div>
+
+</div>
+
+<br>
+
+<button
+class="btn btn-secondary"
+style="width:100%;margin-bottom:10px"
+onclick="editAppointment()"
+>
+✏️ ویرایش اطلاعات
+</button>
+
+<button
+class="btn btn-primary"
+style="width:100%"
+onclick="confirmAppointment()"
+id="confirmAppointmentButton"
+>
+✅ تأیید درخواست نوبت
+</button>
+
+</div>
+
+
+<div id="appointmentSuccessArea" style="display:none">
+
+<div class="success">
+
+<div class="success-icon">
+✓
+</div>
+
+<h2>
+درخواست ثبت شد
+</h2>
+
+<p id="successMessage" style="margin-top:10px"></p>
+
+<br>
+
+<button
+class="btn btn-primary"
+onclick="closeModal('appointmentModal')"
+>
+بستن
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- EMERGENCY -->
+
+<div class="modal" id="emergencyModal">
+
+<div class="modal-box">
+
+<div class="modal-head">
+
+<h2>🚑 اطلاعات اورژانس</h2>
+
+<button class="close" onclick="closeModal('emergencyModal')">
+×
+</button>
+
+</div>
+
+<p>
+در شرایط اورژانسی و خطر فوری، با شماره ۱۱۵ تماس بگیرید.
+</p>
+
+<br>
+
+<a
+href="tel:115"
+class="btn btn-primary"
+style="display:block;text-align:center;text-decoration:none"
+>
+📞 تماس با ۱۱۵
+</a>
+
+</div>
+
+</div>
+
+
+<!-- ADMIN -->
+
+<div class="modal" id="adminModal">
+
+<div class="modal-box modal-large">
+
+<div class="modal-head">
+
+<h2>
+🔐 پنل مدیریت نوبت‌ها
+</h2>
+
+<button class="close" onclick="closeModal('adminModal')">
+×
+</button>
+
+</div>
+
+
+<!-- LOGIN -->
+
+<div id="adminLogin" class="admin-login">
+
+<div class="form-group">
+
+<label>
+رمز ورود مدیریت
+</label>
+
+<input
+type="password"
+id="adminPassword"
+placeholder="رمز مدیریت"
+/>
+
+</div>
+
+<button
+class="btn btn-primary"
+style="width:100%"
+onclick="loginAdmin()"
+>
+ورود به پنل
+</button>
+
+<p
+style="font-size:12px;margin-top:12px;text-align:center;color:#82919b"
+>
+رمز پیش‌فرض: 1234
+</p>
+
+</div>
+
+
+<!-- PANEL -->
+
+<div id="adminPanel" class="admin-panel">
+
+<div class="admin-stats">
+
+<div class="stat">
+
+<div
+class="stat-number"
+id="totalAppointments"
+>
+0
+</div>
+
+<div class="stat-title">
+کل نوبت‌ها
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div
+class="stat-number"
+id="pendingAppointments"
+>
+0
+</div>
+
+<div class="stat-title">
+در انتظار
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div
+class="stat-number"
+id="approvedAppointments"
+>
+0
+</div>
+
+<div class="stat-title">
+تأیید شده
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div
+class="stat-number"
+id="cancelledAppointments"
+>
+0
+</div>
+
+<div class="stat-title">
+لغو شده
+</div>
+
+</div>
+
+</div>
+
+
+<div class="admin-tools">
+
+<input
+type="text"
+class="admin-search"
+id="adminSearch"
+placeholder="🔎 جستجوی نام، شماره یا پزشک..."
+oninput="renderAppointments()"
+/>
+
+<select
+id="statusFilter"
+class="admin-search"
+onchange="renderAppointments()"
+>
+
+<option value="all">
+همه وضعیت‌ها
+</option>
+
+<option value="pending">
+در انتظار
+</option>
+
+<option value="approved">
+تأیید شده
+</option>
+
+<option value="cancelled">
+لغو شده
+</option>
+
+</select>
+
+<button
+class="btn btn-secondary"
+onclick="exportAppointments()"
+>
+📥 خروجی
+</button>
+
+<button
+class="btn btn-danger"
+onclick="clearAllAppointments()"
+>
+🗑️ حذف همه
+</button>
+
+</div>
+
+
+<div
+id="appointmentsList"
+class="appointments-list"
+></div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* =====================================================
+   تنظیمات
+===================================================== */
+
+const ADMIN_PASSWORD = "0813";
+
+const STORAGE_KEY = "imam_reza_hospital_appointments";
+
+
+/* =====================================================
+   پزشکان
+===================================================== */
+
+const doctors = [
+
+{
+name:"دکتر نیوشا بهزادسرشت",
+specialty:"متخصص بیماری‌های عفونی و گرمسیری",
+workplace:"بیمارستان امام رضا (ع) تأمین اجتماعی قم",
+resume:"متخصص بیماری‌های عفونی و گرمسیری. اطلاعات عمومی منتشرشده، تخصص ایشان را در زمینه بیماری‌های عفونی و گرمسیری معرفی می‌کند.",
+education:"متخصص بیماری‌های عفونی و گرمسیری",
+experience:"فعالیت پزشکی در حوزه بیماری‌های عفونی و درمان بیماران",
+note:"برای درج سوابق کامل تحصیلی و اجرایی، اطلاعات باید از منبع رسمی پزشک یا بیمارستان تکمیل شود."
+},
+
+{
+name:"دکتر عاطفه خبازان",
+specialty:"متخصص کودکان و نوزادان",
+workplace:"بیمارستان امام رضا (ع) تأمین اجتماعی قم",
+resume:"متخصص کودکان و نوزادان. اطلاعات عمومی منتشرشده ایشان را دارای بیش از ۱۵ سال سابقه پزشکی معرفی می‌کند.",
+education:"متخصص کودکان و نوزادان",
+experience:"بیش از ۱۵ سال سابقه پزشکی",
+note:"زمینه‌های فعالیت معرفی‌شده شامل رشد و نمو، تغذیه، آسم و آلرژی و بیماری‌های عفونی کودکان است."
+},
+
+{
+name:"دکتر سیدموسی زین‌العابدین",
+specialty:"متخصص جراحی عمومی",
+workplace:"بیمارستان امام رضا (ع) قم",
+resume:"متخصص جراحی عمومی. نام ایشان در منابع عمومی معرفی پزشکان قم در ارتباط با بیمارستان امام رضا (ع) قم ثبت شده است.",
+education:"متخصص جراحی عمومی",
+experience:"فعالیت در حوزه جراحی عمومی",
+note:"برای جلوگیری از درج اطلاعات نادرست، جزئیات بیشتر رزومه تنها با منبع معتبر اضافه می‌شود."
+},
+
+{
+name:"دکتر رحیم نیک‌پی",
+specialty:"پزشک",
+workplace:"بیمارستان امام رضا (ع) قم",
+resume:"نام دکتر رحیم نیک‌پی در فهرست عمومی پزشکان مرتبط با بیمارستان امام رضا (ع) قم ثبت شده است.",
+education:"اطلاعات تأییدشده عمومی درباره جزئیات تحصیلات در دسترس نیست.",
+experience:"پزشک",
+note:"برای تکمیل رزومه حرفه‌ای، اطلاعات رسمی پزشک مورد نیاز است."
+},
+
+{
+name:"دکتر شیما غزالی",
+specialty:"پزشک",
+workplace:"بیمارستان امام رضا (ع) قم",
+resume:"نام دکتر شیما غزالی در فهرست عمومی پزشکان مرتبط با بیمارستان امام رضا (ع) قم ثبت شده است.",
+education:"اطلاعات تأییدشده عمومی درباره جزئیات تحصیلات در دسترس نیست.",
+experience:"پزشک",
+note:"برای تکمیل رزومه حرفه‌ای، اطلاعات رسمی پزشک مورد نیاز است."
+},
+
+{
+name:"دکتر زینب پژوهی",
+specialty:"پزشک",
+workplace:"بیمارستان امام رضا (ع) قم",
+resume:"نام دکتر زینب پژوهی در فهرست عمومی پزشکان مرتبط با بیمارستان امام رضا (ع) قم ثبت شده است.",
+education:"اطلاعات تأییدشده عمومی درباره جزئیات تحصیلات در دسترس نیست.",
+experience:"پزشک",
+note:"برای تکمیل رزومه حرفه‌ای، اطلاعات رسمی پزشک مورد نیاز است."
+}
+
+];
+
+
+/* =====================================================
+   خدمات
+===================================================== */
+
+const services = [
+
+["🚑","اورژانس","ارائه خدمات اولیه و فوری به بیماران در شرایط اورژانسی."],
+["🩺","پزشکی عمومی","بررسی اولیه، معاینه و پیگیری مشکلات عمومی سلامت."],
+["👶","کودکان و نوزادان","ارائه خدمات پزشکی مربوط به کودکان و نوزادان."],
+["⚕️","جراحی عمومی","خدمات و بررسی‌های مرتبط با جراحی عمومی."],
+["🔬","آزمایشگاه","انجام آزمایش‌ها و بررسی‌های تشخیصی پزشکی."],
+["🩻","تصویربرداری پزشکی","خدمات تصویربرداری برای کمک به تشخیص بیماری‌ها."],
+["💊","داروخانه","ارائه و تحویل دارو طبق نسخه و مقررات مربوطه."],
+["🛏️","بخش بستری","مراقبت و درمان بیماران بستری."],
+["🧑‍⚕️","پرستاری","ارائه مراقبت‌های پرستاری به بیماران."],
+["❤️","قلب و عروق","بررسی و پیگیری مشکلات مرتبط با قلب و عروق."],
+["🫁","ریه و تنفس","بررسی مشکلات تنفسی و بیماری‌های مرتبط با ریه."],
+["🦠","بیماری‌های عفونی","بررسی و درمان بیماری‌های عفونی."],
+["🩹","پانسمان و مراقبت از زخم","مراقبت از زخم و انجام پانسمان."],
+["🧠","مغز و اعصاب","بررسی مشکلات مرتبط با سیستم عصبی."],
+["🦴","ارتوپدی","بررسی مشکلات استخوان، مفاصل و اندام حرکتی."],
+["👩‍⚕️","کلینیک تخصصی","ارائه خدمات تخصصی پزشکی."],
+["📋","پذیرش و تشکیل پرونده","راهنمایی برای پذیرش و تشکیل پرونده بیمار."],
+["💳","بیمه و امور تأمین اجتماعی","راهنمایی درباره امور بیمه‌ای و تأمین اجتماعی."],
+["🧪","تشخیص و بررسی‌های پزشکی","بررسی‌های لازم برای کمک به تشخیص پزشکی."],
+["📞","اطلاعات و راهنمایی بیماران","راهنمایی بیماران درباره بخش‌ها و خدمات."]
+
+];
+
+
+/* =====================================================
+   پزشکان
+===================================================== */
+
+function renderDoctors(list = doctors){
+
+const grid = document.getElementById("doctorGrid");
+
+grid.innerHTML = "";
+
+if(list.length === 0){
+
+grid.innerHTML = `
+<div class="doctor-card">
+<h3>پزشکی پیدا نشد</h3>
+<p>نام یا تخصص دیگری را جستجو کنید.</p>
+</div>
+`;
+
+return;
+
+}
+
+list.forEach((doctor,index)=>{
+
+const card = document.createElement("div");
+
+card.className = "doctor-card";
+
+card.innerHTML = `
+
+<div class="doctor-avatar">
+👨‍⚕️
+</div>
+
+<h3>${doctor.name}</h3>
+
+<p>${doctor.specialty}</p>
+
+<button
+class="btn btn-secondary"
+onclick="openDoctor(${index})"
+>
+مشاهده رزومه
+</button>
+
+`;
+
+grid.appendChild(card);
+
+});
+
+}
+
+
+/* =====================================================
+   جستجوی پزشک
+===================================================== */
+
+function searchDoctors(){
+
+const text =
+document.getElementById("doctorSearch")
+.value
+.trim()
+.toLowerCase();
+
+const filtered =
+doctors.filter(d =>
+d.name.toLowerCase().includes(text) ||
+d.specialty.toLowerCase().includes(text)
+);
+
+renderDoctors(filtered);
+
+}
+
+
+/* =====================================================
+   پروفایل پزشک
+===================================================== */
+
+function openDoctor(index){
+
+const doctor = doctors[index];
+
+window.selectedDoctor = doctor.name;
+
+document.getElementById("doctorName").textContent =
+doctor.name;
+
+document.getElementById("doctorContent").innerHTML = `
+
+<p>
+<strong>تخصص:</strong>
+${doctor.specialty}
+</p>
+
+<br>
+
+<p>
+<strong>محل فعالیت:</strong>
+${doctor.workplace}
+</p>
+
+<br>
+
+<p>
+<strong>رزومه:</strong>
+${doctor.resume}
+</p>
+
+<br>
+
+<p>
+<strong>تحصیلات / تخصص:</strong>
+${doctor.education}
+</p>
+
+<br>
+
+<p>
+<strong>سابقه:</strong>
+${doctor.experience}
+</p>
+
+<br>
+
+<p>
+<strong>توضیحات:</strong>
+${doctor.note}
+</p>
+
+`;
+
+openModal("doctorModal");
+
+}
+
+
+/* =====================================================
+   لیست پزشکان نوبت
+===================================================== */
+
+function fillDoctorSelect(){
+
+const select =
+document.getElementById("doctorSelect");
+
+select.innerHTML =
+`<option value="">انتخاب پزشک</option>`;
+
+doctors.forEach(doctor=>{
+
+const option =
+document.createElement("option");
+
+option.value =
+doctor.name;
+
+option.textContent =
+doctor.name + " — " + doctor.specialty;
+
+select.appendChild(option);
+
+});
+
+}
+
+
+/* =====================================================
+   نوبت از پزشک
+===================================================== */
+
+function appointmentFromDoctor(){
+
+closeModal("doctorModal");
+
+openAppointment(window.selectedDoctor || "");
+
+}
+
+
+/* =====================================================
+   باز کردن نوبت
+===================================================== */
+
+function openAppointment(doctorName = ""){
+
+fillDoctorSelect();
+
+document.getElementById("appointmentFormArea").style.display="block";
+
+document.getElementById("appointmentSummaryArea").style.display="none";
+
+document.getElementById("appointmentSuccessArea").style.display="none";
+
+const button =
+document.getElementById("confirmAppointmentButton");
+
+button.disabled=false;
+
+button.textContent =
+"✅ تأیید درخواست نوبت";
+
+if(doctorName){
+
+document.getElementById("doctorSelect").value =
+doctorName;
+
+}
+
+openModal("appointmentModal");
+
+}
+
+
+/* =====================================================
+   خلاصه نوبت
+===================================================== */
+
+function showAppointmentSummary(event){
+
+event.preventDefault();
+
+const name =
+document.getElementById("patientName").value.trim();
+
+const phone =
+document.getElementById("patientPhone").value.trim();
+
+const doctor =
+document.getElementById("doctorSelect").value;
+
+const date =
+document.getElementById("appointmentDate").value;
+
+const time =
+document.getElementById("appointmentTime").value;
+
+const note =
+document.getElementById("appointmentNote").value.trim();
+
+
+document.getElementById("sumName").textContent =
+name;
+
+document.getElementById("sumPhone").textContent =
+phone;
+
+document.getElementById("sumDoctor").textContent =
+doctor;
+
+document.getElementById("sumDate").textContent =
+date;
+
+document.getElementById("sumTime").textContent =
+time;
+
+document.getElementById("sumNote").textContent =
+note || "ندارد";
+
+
+document.getElementById("appointmentFormArea").style.display="none";
+
+document.getElementById("appointmentSummaryArea").style.display="block";
+
+}
+
+
+/* =====================================================
+   ویرایش
+===================================================== */
+
+function editAppointment(){
+
+document.getElementById("appointmentSummaryArea").style.display="none";
+
+document.getElementById("appointmentFormArea").style.display="block";
+
+}
+
+
+/* =====================================================
+   ذخیره نوبت
+===================================================== */
+
+function getAppointments(){
+
+try{
+
+return JSON.parse(
+localStorage.getItem(STORAGE_KEY)
+) || [];
+
+}catch(e){
+
+return [];
+
+}
+
+}
+
+
+function saveAppointments(list){
+
+localStorage.setItem(
+STORAGE_KEY,
+JSON.stringify(list)
+);
+
+}
+
+
+/* =====================================================
+   تأیید نهایی
+===================================================== */
+
+function confirmAppointment(){
+
+const button =
+document.getElementById("confirmAppointmentButton");
+
+button.disabled=true;
+
+button.textContent =
+"⏳ در حال ثبت...";
+
+
+const appointment = {
+
+id:
+Date.now().toString(),
+
+name:
+document.getElementById("patientName").value.trim(),
+
+phone:
+document.getElementById("patientPhone").value.trim(),
+
+doctor:
+document.getElementById("doctorSelect").value,
+
+date:
+document.getElementById("appointmentDate").value,
+
+time:
+document.getElementById("appointmentTime").value,
+
+note:
+document.getElementById("appointmentNote").value.trim(),
+
+status:
+"pending",
+
+createdAt:
+new Date().toLocaleString("fa-IR")
+
+};
+
+
+const appointments =
+getAppointments();
+
+appointments.unshift(appointment);
+
+saveAppointments(appointments);
+
+
+/*
+   اینجا نوبت ذخیره شده است.
+   برای ارسال واقعی به ایتا باید API ایتا
+   در سمت سرور قرار بگیرد.
+*/
+
+document.getElementById("appointmentSummaryArea").style.display="none";
+
+document.getElementById("appointmentSuccessArea").style.display="block";
+
+document.getElementById("successMessage").textContent =
+"نوبت شما با موفقیت ثبت شد. شماره درخواست: " +
+appointment.id;
+
+}
+
+
+/* =====================================================
+   خدمات
+===================================================== */
+
+function renderServices(){
+
+const grid =
+document.getElementById("servicesGrid");
+
+grid.innerHTML = "";
+
+services.forEach((service,index)=>{
+
+const card =
+document.createElement("div");
+
+card.className =
+"service-card";
+
+card.innerHTML = `
+
+<div class="service-icon">
+${service[0]}
+</div>
+
+<h3>
+${service[1]}
+</h3>
+
+`;
+
+card.onclick = () =>
+openService(index);
+
+grid.appendChild(card);
+
+});
+
+}
+
+
+/* =====================================================
+   جزئیات خدمات
+===================================================== */
+
+function openService(index){
+
+const service =
+services[index];
+
+document.getElementById("serviceTitle").textContent =
+service[0] + " " + service[1];
+
+document.getElementById("serviceContent").innerHTML = `
+
+<p>
+<strong>معرفی بخش</strong>
+</p>
+
+<p>
+${service[2]}
+</p>
+
+<br>
+
+<p>
+<strong>چه افرادی به این بخش مراجعه می‌کنند؟</strong>
+</p>
+
+<p>
+بیمارانی که بر اساس شرایط پزشکی یا نظر پزشک به این بخش نیاز دارند،
+می‌توانند برای دریافت خدمات مربوطه به بیمارستان مراجعه کنند.
+</p>
+
+`;
+
+openModal("serviceModal");
+
+}
+
+
+/* =====================================================
+   پنل مدیریت
+===================================================== */
+
+function openAdmin(){
+
+document.getElementById("adminPassword").value="";
+
+document.getElementById("adminLogin").style.display="block";
+
+document.getElementById("adminPanel").style.display="none";
+
+openModal("adminModal");
+
+}
+
+
+function loginAdmin(){
+
+const password =
+document.getElementById("adminPassword").value;
+
+if(password !== ADMIN_PASSWORD){
+
+alert("❌ رمز مدیریت اشتباه است.");
+
+return;
+
+}
+
+document.getElementById("adminLogin").style.display="none";
+
+document.getElementById("adminPanel").style.display="block";
+
+renderAppointments();
+
+}
+
+
+document.getElementById("adminPassword")
+.addEventListener("keydown",function(event){
+
+if(event.key === "Enter"){
+
+loginAdmin();
+
+}
+
+});
+
+
+/* =====================================================
+   نمایش نوبت‌ها
+===================================================== */
+
+function renderAppointments(){
+
+const list =
+getAppointments();
+
+const search =
+document.getElementById("adminSearch")
+.value
+.trim()
+.toLowerCase();
+
+const filter =
+document.getElementById("statusFilter")
+.value;
+
+
+const filtered =
+list.filter(item=>{
+
+const matchesSearch =
+item.name.toLowerCase().includes(search) ||
+item.phone.toLowerCase().includes(search) ||
+item.doctor.toLowerCase().includes(search);
+
+const matchesStatus =
+filter === "all" ||
+item.status === filter;
+
+return matchesSearch && matchesStatus;
+
+});
+
+
+/* آمار */
+
+document.getElementById("totalAppointments").textContent =
+list.length;
+
+document.getElementById("pendingAppointments").textContent =
+list.filter(x=>x.status==="pending").length;
+
+document.getElementById("approvedAppointments").textContent =
+list.filter(x=>x.status==="approved").length;
+
+document.getElementById("cancelledAppointments").textContent =
+list.filter(x=>x.status==="cancelled").length;
+
+
+/* لیست */
+
+const container =
+document.getElementById("appointmentsList");
+
+container.innerHTML="";
+
+
+if(filtered.length===0){
+
+container.innerHTML=`
+<div class="empty">
+📭 نوبتی پیدا نشد.
+</div>
+`;
+
+return;
+
+}
+
+
+filtered.forEach(item=>{
+
+const card =
+document.createElement("div");
+
+card.className =
+"appointment-card";
+
+
+let statusText = "در انتظار";
+
+let statusClass = "status-pending";
+
+
+if(item.status==="approved"){
+
+statusText="تأیید شده";
+statusClass="status-approved";
+
+}
+
+
+if(item.status==="cancelled"){
+
+statusText="لغو شده";
+statusClass="status-cancelled";
+
+}
+
+
+card.innerHTML = `
+
+<div class="appointment-top">
+
+<h3>
+👤 ${escapeHTML(item.name)}
+</h3>
+
+<span class="status ${statusClass}">
+${statusText}
+</span>
+
+</div>
+
+
+<div class="appointment-info">
+
+<div>
+📞 ${escapeHTML(item.phone)}
+</div>
+
+<div>
+👨‍⚕️ ${escapeHTML(item.doctor)}
+</div>
+
+<div>
+📅 ${escapeHTML(item.date)}
+</div>
+
+<div>
+🕐 ${escapeHTML(item.time)}
+</div>
+
+<div>
+📝 ${escapeHTML(item.note || "ندارد")}
+</div>
+
+<div>
+🆔 ${escapeHTML(item.id)}
+</div>
+
+</div>
+
+
+<div class="appointment-actions">
+
+<button
+class="btn btn-success btn-small"
+onclick="changeAppointmentStatus('${item.id}','approved')"
+>
+✅ تأیید
+</button>
+
+<button
+class="btn btn-secondary btn-small"
+onclick="changeAppointmentStatus('${item.id}','pending')"
+>
+⏳ در انتظار
+</button>
+
+<button
+class="btn btn-danger btn-small"
+onclick="changeAppointmentStatus('${item.id}','cancelled')"
+>
+❌ لغو
+</button>
+
+<button
+class="btn btn-danger btn-small"
+onclick="deleteAppointment('${item.id}')"
+>
+🗑️ حذف
+</button>
+
+</div>
+
+`;
+
+container.appendChild(card);
+
+});
+
+}
+
+
+/* =====================================================
+   تغییر وضعیت
+===================================================== */
+
+function changeAppointmentStatus(id,status){
+
+const list =
+getAppointments();
+
+const item =
+list.find(x=>x.id===id);
+
+if(!item){
+
+return;
+
+}
+
+item.status=status;
+
+saveAppointments(list);
+
+renderAppointments();
+
+}
+
+
+/* =====================================================
+   حذف نوبت
+===================================================== */
+
+function deleteAppointment(id){
+
+if(!confirm("آیا از حذف این نوبت مطمئن هستید؟")){
+
+return;
+
+}
+
+const list =
+getAppointments()
+.filter(x=>x.id!==id);
+
+saveAppointments(list);
+
+renderAppointments();
+
+}
+
+
+/* =====================================================
+   حذف همه
+===================================================== */
+
+function clearAllAppointments(){
+
+const list =
+getAppointments();
+
+if(list.length===0){
+
+alert("نوبتی برای حذف وجود ندارد.");
+
+return;
+
+}
+
+if(!confirm("آیا می‌خواهید تمام نوبت‌ها حذف شوند؟")){
+
+return;
+
+}
+
+localStorage.removeItem(STORAGE_KEY);
+
+renderAppointments();
+
+}
+
+
+/* =====================================================
+   خروجی نوبت‌ها
+===================================================== */
+
+function exportAppointments(){
+
+const list =
+getAppointments();
+
+if(list.length===0){
+
+alert("هیچ نوبتی برای خروجی وجود ندارد.");
+
+return;
+
+}
+
+let text =
+"گزارش نوبت‌های بیمارستان امام رضا (ع)\n\n";
+
+
+list.forEach((item,index)=>{
+
+text +=
+"-----------------------------\n";
+
+text +=
+"نوبت شماره: " + (index+1) + "\n";
+
+text +=
+"نام: " + item.name + "\n";
+
+text +=
+"شماره تماس: " + item.phone + "\n";
+
+text +=
+"پزشک: " + item.doctor + "\n";
+
+text +=
+"تاریخ: " + item.date + "\n";
+
+text +=
+"ساعت: " + item.time + "\n";
+
+text +=
+"توضیحات: " + (item.note || "ندارد") + "\n";
+
+text +=
+"وضعیت: " + item.status + "\n";
+
+text +=
+"-----------------------------\n\n";
+
+});
+
+
+const blob =
+new Blob([text],{
+type:"text/plain;charset=utf-8"
+});
+
+const url =
+URL.createObjectURL(blob);
+
+const a =
+document.createElement("a");
+
+a.href=url;
+
+a.download=
+"hospital-appointments.txt";
+
+a.click();
+
+URL.revokeObjectURL(url);
+
+}
+
+
+/* =====================================================
+   جلوگیری از HTML injection
+===================================================== */
+
+function escapeHTML(value){
+
+return String(value)
+.replaceAll("&","&amp;")
+.replaceAll("<","&lt;")
+.replaceAll(">","&gt;")
+.replaceAll('"',"&quot;")
+.replaceAll("'","&#039;");
+
+}
+
+
+/* =====================================================
+   مودال‌ها
+===================================================== */
+
+function openModal(id){
+
+document
+.getElementById(id)
+.classList
+.add("show");
+
+document.body.style.overflow="hidden";
+
+}
+
+
+function closeModal(id){
+
+document
+.getElementById(id)
+.classList
+.remove("show");
+
+document.body.style.overflow="";
+
+}
+
+
+/* =====================================================
+   کلیک بیرون مودال
+===================================================== */
+
+document
+.querySelectorAll(".modal")
+.forEach(modal=>{
+
+modal.addEventListener("click",function(event){
+
+if(event.target === modal){
+
+modal.classList.remove("show");
+
+document.body.style.overflow="";
+
+}
+
+});
+
+});
+
+
+/* =====================================================
+   ESC
+===================================================== */
+
+document.addEventListener("keydown",function(event){
+
+if(event.key==="Escape"){
+
+document
+.querySelectorAll(".modal")
+.forEach(modal=>{
+
+modal.classList.remove("show");
+
+});
+
+document.body.style.overflow="";
+
+}
+
+});
+
+
+/* =====================================================
+   اسکرول
+===================================================== */
+
+function scrollToSection(id){
+
+document
+.getElementById(id)
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+/* =====================================================
+   اورژانس
+===================================================== */
+
+function openEmergency(){
+
+openModal("emergencyModal");
+
+}
+
+
+/* =====================================================
+   تاریخ امروز
+===================================================== */
+
+const today =
+new Date()
+.toISOString()
+.split("T")[0];
+
+document
+.getElementById("appointmentDate")
+.min=today;
+
+
+/* =====================================================
+   شروع سایت
+===================================================== */
+
+renderDoctors();
+
+renderServices();
+
+fillDoctorSelect();
+
+</script>
+
+</body>
+</html>
+```
